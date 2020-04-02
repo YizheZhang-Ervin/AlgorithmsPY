@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block blockmain %}
+    <div class="col-2 bg_transdark text-white">
+        <nav>
+            <h3 class="text-center margin-top-5">EZAlgorithms</h3>
+            <hr class="bg-white">
+            <div class="text-indent-7">
+                <p class="margin-0">Data Structure</p>
+                <a href="#"><li>Array</li></a>
+                <a href="#"><li>Linked List</li></a>
+                <a href="#"><li>Stack</li></a>
+                <p class="margin-0">Strategy</p>
+                <a href="#"><li>Divide&Conquer</li></a>
+                <a href="#"><li>Recursion</li></a>
+                <p class="margin-0">Algorithms</p>
+                <a href="#"><li>Binary Search</li></a>
+                <a href="#"><li>Selection Sort</li></a>
+                <a href="#"><li>Quick Sort</li></a>
+
+            </div>
+        </nav>
+    </div>
+    <div class="col-10">
+        <nav class="navbar navbar-expand navbar-dark">
+          <a class="navbar-brand" href="#">HomePage</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarsExample02">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#"><span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"></a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-md-0">
+              <input class="form-control bg_transdark text-white" type="text" placeholder="Search">
+            </form>
+          </div>
+        </nav>
+        <main>
+            <form method="post" action="/">
+                <input class="bg_transdark btn text-white" type="submit" name="apply" value="Apply">
+                <div class="row">
+                    <div class="col-6">
+                        <p class="text-white">Choose Algorithms:</p>
+                        <select id="alg" name="alg" class="text-white bg_transdark" onchange="changeselect()">
+                            <option id="bs" value="BinarySearch">Binary Search</option>
+                            <option id="qs" value="QuickSort">Quick Sort</option>
+                            <option id="ss" value="SelectionSort">Selection Sort</option>
+                        </select>
+                        <p class="text-white">Input Lists:</p>
+                        <input class="text-white bg_transdark" name="list" placeholder="list">
+                        <p class="text-white">Input Elements:</p>
+                        <input class="text-white bg_transdark" id="element" name="element" placeholder="element">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 ">
+                        <p class="text-white">Output:</p>
+                        <textarea class="text-white bg_transdark w-100 h-em" name="output" readonly>{{output}}</textarea>
+                        <p class="text-white">History:</p>
+                        <textarea class="text-white bg_transdark w-100 h-em" name="history" readonly>{{history}}</textarea>
+                        <p class="text-white">Source Code:</p>
+                        <textarea class="text-white bg_transdark w-100 h-em2" name="code" readonly>{{sourcecode}}</textarea>
+                    </div>
+                </div>
+            </form>
+        </main>
+    </div>
+{% endblock %}
