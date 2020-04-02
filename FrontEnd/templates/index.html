@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block blockmain %}
-    <div class="col-2 bg_transdark text-white">
+    <div class="col-lg-2 bg_transdark text-white">
         <nav>
             <h3 class="text-center margin-top-5">EZAlgorithms</h3>
             <hr class="bg-white">
@@ -20,7 +20,7 @@
             </div>
         </nav>
     </div>
-    <div class="col-10">
+    <div class="col-lg-10">
         <nav class="navbar navbar-expand navbar-dark">
           <a class="navbar-brand" href="#">HomePage</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,21 +45,21 @@
             <form method="post" action="/">
                 <input class="bg_transdark btn text-white" type="submit" name="apply" value="Apply">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-md-6 col-sm-12">
                         <p class="text-white">Choose Algorithms:</p>
-                        <select id="alg" name="alg" class="text-white bg_transdark" onchange="changeselect()">
+                        <select id="alg" name="alg" class="text-white bg_transdark w-100" onchange="changeselect()">
                             <option id="bs" value="BinarySearch">Binary Search</option>
                             <option id="qs" value="QuickSort">Quick Sort</option>
                             <option id="ss" value="SelectionSort">Selection Sort</option>
                         </select>
                         <p class="text-white">Input Lists:</p>
-                        <input class="text-white bg_transdark" name="list" placeholder="list">
+                        <input class="text-white bg_transdark w-100" name="list" placeholder="list">
                         <p class="text-white">Input Elements:</p>
-                        <input class="text-white bg_transdark" id="element" name="element" placeholder="element">
+                        <input class="text-white bg_transdark w-100" id="element" name="element" placeholder="element">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-6 ">
+                    <div class="col-md-6 col-sm-12">
                         <p class="text-white">Output:</p>
                         <textarea class="text-white bg_transdark w-100 h-em" name="output" readonly>{{output}}</textarea>
                         <p class="text-white">History:</p>
