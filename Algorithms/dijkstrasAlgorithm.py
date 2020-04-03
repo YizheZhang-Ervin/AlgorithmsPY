@@ -15,18 +15,13 @@ graph["fin"] = {}
 
 # the costs table
 infinity = float("inf")
-costs = {}
-costs["a"] = 6
-costs["b"] = 2
-costs["fin"] = infinity
+costs = {"a": 6, "b": 2, "fin": infinity}
 
 # the parents table
-parents = {}
-parents["a"] = "start"
-parents["b"] = "start"
-parents["fin"] = None
+parents = {"a": "start", "b": "start", "fin": None}
 
 processed = []
+
 
 def find_lowest_cost_node(costs):
     lowest_cost = float("inf")
@@ -40,6 +35,7 @@ def find_lowest_cost_node(costs):
             lowest_cost = cost
             lowest_cost_node = node
     return lowest_cost_node
+
 
 # Find the lowest-cost node that you haven't processed yet.
 node = find_lowest_cost_node(costs)

@@ -21,8 +21,8 @@
     margin-top:5%;
 }
 
-.text-indent-7{
-    text-indent:7%;
+.marginleft-15{
+    margin-left:15%;
 }
 
 p{
@@ -52,4 +52,10 @@ textarea{
 
 .h-em2{
     height:20em;
+}
+
+li{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
