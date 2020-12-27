@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Algorithms</title>
+        <link rel="stylesheet" type="text/css" href="./index.css">
+    </head>
+
+    <body>
+        <div id="app">
+            <header>
+                <p title="Algorithms" style="display: inline;">Algorithms</p>
+                <img @click="changeMenuShow" class="menuBtn"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABVUlEQVR4Xu1YOwrCQBDdiZWNQohnsLDwBoIIxtIzGDyVBs9gacADiI0HECxFRDStkKw3cA0Z1gzzUoeZt2/efMko/0j5+w0IgAKUM4AUUC4AFEGkAFJAOQNIAeUCcHeBcJKcKDBDiUSVZLbPLJ1/w+5MARAABSAFUANUF8HeNBlZE3QkdgFbmNtjvzrW6gISH14Fs7MNVjEm8V8QIDFqnJihAE42JdqCAiRGjROzUwFhvBwEZdHmdOrLFgX0uu/Sc61BCOsw1mGsw1iHVa/D6otgNFv0qWiJbINvsnmerS+12qCvnv0vP85B6F/AfPkFAb6YbqofKKCpkfGFCwrwxXRT/TgVEMWLsbXUbeoDvuMqr49sc6g1CKkfhUEADiI4iOAgovogIrP9/Y7aOQf8bkrmnyBAZtz4UEMBfFzKtAQFyIwbH2oogI9LmZagAJlx40OtXgEfUC+LQbV3zEEAAAAASUVORK5CYII=">
+                <div class="menu" :style="width" v-show="menuShow">
+                    <input tyep="text" class="bgtrans menuInnerBtn" placeholder="type in problem No." v-model="problemNo">
+                    <input type="button" value="Change Problem" class="bgtrans menuInnerBtn" @click="changeProblem()">
+                    <input type="button" value="Test Result" class="bgtrans menuInnerBtn" @click="testResult()">
+                </div>
+            </header>
+            <main style="overflow-y: hidden;">
+                <div class="left" :style="height">
+                    <div class="pre" id="left"></div>
+                </div>
+                <div class="right" :style="height">
+                    <textarea class="pre" id="right" contenteditable="true" @keydown="changeLine($event)" v-model="codes"></textarea>
+                </div>
+            </main>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios@0.21.0/dist/axios.min.js"></script>
+        <script src="./index.js" async="async"></script>
+    </body>
+
+</html>
