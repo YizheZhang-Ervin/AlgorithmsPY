@@ -1,14 +1,24 @@
-# EZAlgorithms
-## FrontEnd
-Vue  
-  
-### Run
-entrance:index.html  
-  
-## BackEnd
-Flask RESTful  
-  
-### Run
-workon env_develop  
-cd Server  
-python -m flask run  
+# EZDataStructure
+Data Structure & Algorithms by Python  
+
+## Algorithms
+search   
+sort  
+stack  
+queue  
+iteration  
+tree  
+graph  
+greedy  
+dynamic  
+TurtleVisualization  
+
+## Data Structure
+orderedlist  
+unorderedlist  
+stack  
+queue  
+deque  
+map  
+tree  
+graph  
