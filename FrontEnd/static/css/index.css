@@ -1,0 +1,14 @@
+*{
+    margin:0;
+}
+
+.notify{
+    background-color: lightgreen;
+    padding: 5px;
+    text-align: center;
+}
+
+.center{
+    text-align: center;
+    padding: 5px;
+}
